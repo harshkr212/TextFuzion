@@ -9,7 +9,7 @@ import React from "react";
 import {
   BrowserRouter as Router,
   Route,
-  Routes
+  Routes,Navigate
 } from "react-router-dom";
 
 
@@ -81,7 +81,7 @@ function App() {
   //     console.log(mode);
   //   }
   // }
-  
+
   const changeMode = (newMode) => {
     if (modes[newMode]) {
       setMode(newMode);
@@ -112,6 +112,8 @@ function App() {
               showAlert={showAlert}
             />
            } />
+           <Route path="/TextFuzion" element={<Navigate to="/" replace />} />
+           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </Router> 
     </>
