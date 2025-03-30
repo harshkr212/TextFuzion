@@ -2,11 +2,10 @@
 <html>
   <head>
     <script>
-      // Store the original path
-      sessionStorage.redirect = location.pathname;
-      
-      // Redirect with your repo name (only change this line!)
-      window.location.replace('/TextFuzion' + location.pathname);
+      // Store full path and redirect to root
+      const path = location.pathname + location.search + location.hash;
+      sessionStorage.setItem('redirect', path);
+      window.location.href = '/TextFuzion/'; // ← Your exact repo name
     </script>
   </head>
 </html>

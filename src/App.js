@@ -7,10 +7,10 @@ import Textform from './components/Textform';
 import Alert from './components/Alert'
 import React from "react";
 import {
-  BrowserRouter as Router,
   Route,
   Routes,Navigate
 } from "react-router-dom";
+import { HashRouter as Router } from 'react-router-dom';
 
 
 function App() {
@@ -112,7 +112,7 @@ function App() {
               showAlert={showAlert}
             />
            } />
-           <Route path="/TextFuzion" element={<Navigate to="/" replace />} />
+          
            <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </Router> 
